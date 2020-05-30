@@ -14,11 +14,13 @@ pip3 install .
 
 ## Download dataset
 
+This should take less than a minute.
+
 ```sh
 ./prepare_dataset.sh
 ```
 
-### Profile using NVProf or NSys to obtain a SQLite3 database
+## Profile using NVProf or NSys to obtain a SQLite3 database
 
 ```sh
 nvprof -fo ncf%p.sqlite \
