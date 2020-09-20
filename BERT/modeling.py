@@ -351,7 +351,7 @@ class BertEmbeddings(nn.Module):
         position_ids = torch.arange(seq_length, dtype=torch.long, device=input_ids.device)
         position_ids = position_ids.unsqueeze(0).expand_as(input_ids)
 
-        nvtx.range_push("layer:Word")
+        nvtx.range_push("layer:Segment")
         words_embeddings = self.word_embeddings(input_ids)
         nvtx.range_pop()
 
